@@ -37,7 +37,7 @@ export class MockTranslationService implements TranslationService {
     setTimeout(() => this.emit({ type: "camera", status: "ready" }), 600);
     this.stopTimer();
     this.timer = setInterval(() => {
-      const sign = SCRIPT[this.i++ % SCRIPT.length];
+      const sign = SCRIPT[this.i++ % SCRIPT.length] ?? null;
       if (sign === null) {
         this.emit({ type: "processing", hand: false });
         if (!this.text.endsWith(" ")) this.text += " ";
