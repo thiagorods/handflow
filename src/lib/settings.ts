@@ -8,7 +8,7 @@ export interface HandflowSettings {
 }
 
 export const DEFAULT_API_URL =
-  (import.meta.env.VITE_PYTHON_API_URL as string | undefined) ?? "http://127.0.0.1:8000";
+  (import.meta.env['VITE_PYTHON_API_URL'] as string | undefined) ?? "http://127.0.0.1:8000";
 
 export const DEFAULT_SETTINGS: HandflowSettings = {
   apiUrl: DEFAULT_API_URL,

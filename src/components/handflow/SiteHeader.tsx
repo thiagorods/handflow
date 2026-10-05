@@ -20,7 +20,7 @@ export function SiteHeader({ right }: { right?: React.ReactNode }) {
             <Link
               key={n.label}
               to={n.to}
-              hash={"hash" in n ? n.hash : undefined}
+              {...("hash" in n ? { hash: n.hash } : {})}
               className="rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
               activeOptions={{ exact: true, includeHash: true }}
               activeProps={{ className: "text-foreground font-medium" }}
