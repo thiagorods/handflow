@@ -1,5 +1,5 @@
 {
-  "name": "tanstack_start_ts",
+  "name": "handflow",
   "private": true,
   "sideEffects": false,
   "type": "module",
@@ -12,8 +12,8 @@
     "format": "prettier --write .",
     "test": "vitest run",
     "test:watch": "vitest",
-    "api": "cd python-service && python -m uvicorn api.server:app --host 127.0.0.1 --port 8000",
-    "api:install": "cd python-service && python -m pip install -r requirements.txt -r requirements-api.txt"
+    "api": "cd python-service && python3 -m uvicorn api.server:app --host 127.0.0.1 --port 8000",
+    "api:install": "cd python-service && python3 -m pip install -r requirements.txt -r requirements-api.txt"
   },
   "overrides": {
     "rolldown": "1.2.1"
